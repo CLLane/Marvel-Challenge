@@ -14,7 +14,8 @@ export class CharactersComponent implements OnInit {
   ngOnInit() {
       this.apiService.getCharacters().subscribe((data) => {
         console.log('data :>> ', data);
-        this.characters = data;
+        this.characters = data['data']['results'];
+        console.log(this.characters)
       })
   }
 
