@@ -22,4 +22,9 @@ export class ApiService {
       `https://gateway.marvel.com/v1/public/creators?ts=${this.ts}&apikey=${this.API_Key}&hash=${this.hash}`
     );
   }
+  public getCreatorItems(creatorId) {
+    return this.httpClient.get(
+      `https://gateway.marvel.com/v1/public/creators/${creatorId}/comics?ts=${this.ts}&apikey=${this.API_Key}&hash=${this.hash}`
+    );
+  }
 }

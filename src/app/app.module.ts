@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './characters/characters.component';
+import { CreatorsComponent } from './creators/creators.component';
 
 @NgModule({
-  declarations: [AppComponent, CharactersComponent],
+  declarations: [AppComponent, CharactersComponent, CreatorsComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
