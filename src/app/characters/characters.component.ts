@@ -7,10 +7,15 @@ import { ApiService } from '../api.service';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
+  characters;
 
   constructor(private apiService: ApiService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+      this.apiService.getCharacters().subscribe((data) => {
+        console.log('data :>> ', data);
+        this.characters = data['characters'];
+      })
   }
 
 }
