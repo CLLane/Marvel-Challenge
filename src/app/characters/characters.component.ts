@@ -13,9 +13,11 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit() {
       this.apiService.getCharacters().subscribe((data) => {
-        console.log('data :>> ', data);
-        this.characters = data['characters'];
+        console.log('data :>> ', data.data.results);
+        this.characters = data.data.results;
       })
   }
 
 }
+
+
