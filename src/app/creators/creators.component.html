@@ -1,9 +1,14 @@
-<div *ngFor="let creator of creators">
-  <h2>{{creator.fullName}}</h2>
-    <button (click)="findComics(creator.id)">See Comics</button>
-    <div *ngIf="items">
-      <div *ngFor="let item of items">
-        <p>Yo</p>
-      </div>
+<section>
+  <div>
+    <div *ngFor="let creator of creators">
+      <h2 (click)="findComics(creator.id)">{{ creator.fullName }}</h2>
+      <button (click)="findComics(creator.id)">See Comics</button>
     </div>
-</div>
+  </div>
+      <div *ngIf="items">
+        <ul *ngFor="let item of items">
+          <li>{{ item }}</li>
+        </ul>
+      </div>
+
+</section>

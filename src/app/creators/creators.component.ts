@@ -22,8 +22,8 @@ export class CreatorsComponent implements OnInit {
   findComics(creatorId) {
     this.apiService.getCreatorItems(creatorId).subscribe((data) => {
       // console.log('data', data)
-      this.items = data['data']['results']
-      console.log('this.items', this.items)
+      this.items = data['data']['results'].map(el => el.title)
+      this.items = this.items.length > 0 ? this.items : ['No items available']
     })
   }
 

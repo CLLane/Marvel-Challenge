@@ -1,4 +1,7 @@
-<div *ngFor="let character of characters">
-  <h2>{{character.name}}</h2>
-    <p>{{character.description || "No Information"}}</p>
+<div>
+  <input type="text" placeholder="Search and Character" (keyup.enter)="OnInput($event)">
+  <div *ngFor="let character of characters">
+    <h2>{{ character.name }}</h2>
+    <p>{{ character.description || "No Information" }}</p>
+  </div>
 </div>
