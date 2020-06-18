@@ -19,6 +19,10 @@ export class CharactersComponent implements OnInit {
       })
   }
 
+  onInput(e) {
+    
+  }
+
 }
 
 

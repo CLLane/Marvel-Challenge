@@ -17,6 +17,9 @@ export class ApiService {
     return this.httpClient.get(`https://gateway.marvel.com/v1/public/characters?ts=${this.ts}&apikey=${this.API_Key}&hash=${this.hash}
 `)
   }
+  public getSpecificCharacter(character) {
+    
+  }
   public getCreators() {
     return this.httpClient.get(
       `https://gateway.marvel.com/v1/public/creators?ts=${this.ts}&apikey=${this.API_Key}&hash=${this.hash}`
